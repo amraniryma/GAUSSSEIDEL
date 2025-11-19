@@ -1,0 +1,11 @@
+# Commit 2: Read a number
+def read_float(msg):
+    while True:  
+        value = input(msg)          # ask user for input
+        if value.strip() == "":     # if input empty, try again
+            print("Invalid input. Try again.")
+            continue
+        try:
+            return float(value)     # convert input to float
+        except ValueError:
+            print("Invalid number. Try again.")  # error message
