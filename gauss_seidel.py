@@ -61,3 +61,5 @@ def main():
     print("Final solution:", X)
 # Main function to run the program
 
+main()
+# Execute the main function
