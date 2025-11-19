@@ -1,0 +1,11 @@
+# Commit 7: Gauss-Seidel iterations
+    for k in range(max_iterations):
+        X_old = X.copy()  # save old solution
+        for i in range(n):
+            sum_before = sum(A[i][j] * X[j] for j in range(i))
+            sum_after = sum(A[i][j] * X_old[j] for j in range(i+1, n))
+            X[i] = (B[i] - sum_before - sum_after) / A[i][i]  # update X[i]
+        print(f"Iteration {k+1}: {X}")  # print iteration
+        if np.allclose(X, X_old, atol=tol):  # check convergence
+            return X
+    return X  # return final solution
