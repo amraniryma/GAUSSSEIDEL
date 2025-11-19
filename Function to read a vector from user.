@@ -1,0 +1,6 @@
+# Commit 4: Read vector B
+def read_vector(n):
+    B = np.zeros(n, dtype=float)  # create zero vector
+    for i in range(n):
+        B[i] = read_float(f"B[{i+1}]: ")  # fill vector
+    return B
