@@ -1,0 +1,4 @@
+# Commit 6: Start Gauss-Seidel
+def gauss_seidel(A, B, tol=1e-6, max_iterations=100):
+    n = len(A)
+    X = np.zeros(n, dtype=float)  # initial guess: all zeros
