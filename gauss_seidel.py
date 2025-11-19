@@ -22,4 +22,15 @@ def gauss_seidel(A, B, tol=1e-6, max_iterations=100):
             return X
     return X
 # Function solves AX=B using Gauss-Seidel iterative method
+def read_float(msg):
+    while True:
+        value = input(msg)
+        if value.strip() == "":
+            print("Invalid input. Try again.")
+            continue
+        try:
+            return float(value)
+        except ValueError:
+            print("Invalid number. Try again.")
+# Function to safely read a float from user
 
