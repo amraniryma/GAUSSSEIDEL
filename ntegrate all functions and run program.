@@ -1,0 +1,14 @@
+# Commit 8: Main program
+def main():
+    n = int(read_float("Enter number of variables: "))  # number of variables
+    A = read_matrix(n)  # read matrix A
+    B = read_vector(n)  # read vector B
+
+    if not is_diagonally_dominant(A):  # check matrix
+        print("Matrix is not diagonally dominant.")
+        return
+
+    X = gauss_seidel(A, B)  # solve system
+    print("Final solution:", X)  # print result
+
+main()  # run program

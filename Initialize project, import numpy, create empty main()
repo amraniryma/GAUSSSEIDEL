@@ -1,0 +1,7 @@
+# Commit 1: Start project
+import numpy as np  # import numpy for arrays and math
+
+def main():          # main function
+    pass
+
+main()               # call main
