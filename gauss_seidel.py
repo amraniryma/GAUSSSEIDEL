@@ -48,3 +48,16 @@ def read_vector(n):
     return B
 # Functions to read matrix A and vector B from user
 
+def main():
+    n = int(read_float("Enter number of variables: "))
+    A = read_matrix(n)
+    B = read_vector(n)
+
+    if not is_diagonally_dominant(A):
+        print("Matrix is not diagonally dominant.")
+        return
+
+    X = gauss_seidel(A, B)
+    print("Final solution:", X)
+# Main function to run the program
+
