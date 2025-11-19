@@ -34,3 +34,17 @@ def read_float(msg):
             print("Invalid number. Try again.")
 # Function to safely read a float from user
 
+def read_matrix(n):
+    A = np.zeros((n, n), dtype=float)
+    for i in range(n):
+        for j in range(n):
+            A[i][j] = read_float(f"A[{i+1}][{j+1}]: ")
+    return A
+
+def read_vector(n):
+    B = np.zeros(n, dtype=float)
+    for i in range(n):
+        B[i] = read_float(f"B[{i+1}]: ")
+    return B
+# Functions to read matrix A and vector B from user
+
