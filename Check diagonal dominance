@@ -1,0 +1,8 @@
+# Commit 5: Check diagonal dominance
+def is_diagonally_dominant(A):
+    n = len(A)
+    for i in range(n):
+        # diagonal element must be bigger than sum of others in row
+        if abs(A[i][i]) <= sum(abs(A[i][j]) for j in range(n) if j != i):
+            return False  # not dominant
+    return True  # dominant
